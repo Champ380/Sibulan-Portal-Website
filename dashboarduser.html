@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sibulan Poblacion Portal - Resident Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb690",
+              "surface-dim": "#cfdaf2",
+              "on-secondary-fixed-variant": "#3a485b",
+              "tertiary": "#381300",
+              "on-primary-fixed-variant": "#1f477b",
+              "primary-container": "#003366",
+              "outline-variant": "#c3c6d1",
+              "surface-bright": "#f9f9ff",
+              "secondary-fixed-dim": "#b9c7df",
+              "on-primary-fixed": "#001b3c",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d8e3fb",
+              "primary-fixed": "#d5e3ff",
+              "surface-tint": "#3a5f94",
+              "surface-container-low": "#f0f3ff",
+              "surface-container": "#e7eeff",
+              "on-tertiary-fixed-variant": "#723610",
+              "secondary-container": "#d5e3fc",
+              "background": "#f9f9ff",
+              "on-surface": "#111c2d",
+              "on-secondary-fixed": "#0d1c2e",
+              "secondary-fixed": "#d5e3fc",
+              "outline": "#737780",
+              "on-error": "#ffffff",
+              "on-background": "#111c2d",
+              "surface": "#f9f9ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#341100",
+              "inverse-surface": "#263143",
+              "inverse-on-surface": "#ecf1ff",
+              "primary-fixed-dim": "#a7c8ff",
+              "secondary": "#515f74",
+              "on-tertiary-container": "#d8885c",
+              "on-primary-container": "#799dd6",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffdbca",
+              "surface-variant": "#d8e3fb",
+              "tertiary-container": "#592300",
+              "primary": "#001e40",
+              "on-surface-variant": "#43474f",
+              "inverse-primary": "#a7c8ff",
+              "error": "#ba1a1a",
+              "surface-container-high": "#dee8ff",
+              "on-secondary-container": "#57657a"
+            },
+            fontFamily: {
+              "headline": ["Public Sans"],
+              "body": ["Public Sans"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Public Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f9ff]/80 dark:bg-[#111c2d]/80 backdrop-blur-md shadow-sm dark:shadow-none font-['Public_Sans'] antialiased">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tight text-[#001e40] dark:text-[#dee8ff]">Sibulan Poblacion Portal</span>
+</div>
+<div class="flex items-center space-x-4">
+<div class="hidden md:flex items-center bg-surface-container-low px-4 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface-variant w-48" placeholder="Search portal..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-[#e7eeff] transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-[#e7eeff] transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden ml-2 border border-outline-variant">
+<img alt="Resident Profile Avatar" data-alt="Close-up portrait of a friendly man with a warm smile, professional lighting, clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPBo2VfMCMvkrUXCS-k2tqJI9PppHVCCOrM21aMaxF_IptcCzJstF3y9Fpqcu-nzODAA11M5oD6TD2MulTi7h58u_f_YP8G7Y1Bh4PIHHl3H_8qe1E6B4fCGaLFK-Z4bZtKRi3XnOeqshpW72geeYpGiqDU2wDQYqm0B4JtV3-C_E1cgsAFk0kDNQe40QVqJNgrN6lpve9_oKczRvl_eLSjLr7bMBj2fJs5uCY8X68kPQyhUu2aM3gASey2Xh_KstXnnC8GLURzbA"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="flex pt-16">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 pt-20 bg-[#f0f3ff] dark:bg-[#111c2d] font-['Public_Sans'] leading-relaxed hidden md:block">
+<div class="px-6 mb-8">
+<h2 class="text-lg font-black text-[#001e40] dark:text-[#dee8ff]">Sibulan Poblacion</h2>
+<p class="text-xs text-on-surface-variant">Official Resident Portal</p>
+</div>
+<nav class="flex flex-col space-y-2 py-4 pr-4">
+<a class="flex items-center gap-3 px-6 py-3 bg-[#e7eeff] dark:bg-[#003366] text-[#001e40] dark:text-white font-bold rounded-r-lg transform hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-[#43474f] dark:text-[#c3c6d1] hover:text-[#001e40] hover:bg-[#dee8ff] dark:hover:bg-[#1a2637] transform hover:translate-x-1 transition-transform" href="facilityuser.html">
+<span class="material-symbols-outlined" data-icon="home_work">home_work</span>
+<span>Facilities</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-[#43474f] dark:text-[#c3c6d1] hover:text-[#001e40] hover:bg-[#dee8ff] dark:hover:bg-[#1a2637] transform hover:translate-x-1 transition-transform" href="inventoryuser.html">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Inventory</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-[#43474f] dark:text-[#c3c6d1] hover:text-[#001e40] hover:bg-[#dee8ff] dark:hover:bg-[#1a2637] transform hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<div class="mt-auto px-4 pb-8 space-y-2">
+<button class="w-full flex items-center justify-center gap-2 py-3 bg-primary text-on-primary rounded-lg font-semibold hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="campaign">campaign</span>
+                    Report Issue
+                </button>
+<div class="pt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-sm text-[#43474f] hover:text-[#001e40] transition-colors" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help">help</span>
+                        Help Center
+                    </a>
+<a class="flex items-center gap-3 px-4 py-2 text-sm text-error hover:opacity-80 transition-colors" href="index.html">
+<span class="material-symbols-outlined text-lg" data-icon="logout">logout</span>
+                        Logout
+                    </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 p-8 bg-surface">
+<!-- Institutional Breadcrumb -->
+<div class="bg-surface-container-highest/40 backdrop-blur-sm px-4 py-2 mb-8 inline-flex items-center rounded text-xs font-semibold tracking-wider text-on-surface-variant uppercase">
+                Sibulan Poblacion Portal / Resident Overview
+            </div>
+<!-- Dashboard Overview: Welcome Message -->
+<section class="mb-12">
+<div class="max-w-4xl">
+<h1 class="text-5xl font-extrabold text-primary tracking-tight mb-4">Welcome back, Juan.</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl mb-8">Your local community is thriving. Here's a look at your current status and pending neighborhood requests.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="verified">verified</span>
+<h3 class="font-bold text-lg text-primary">Active Permits</h3>
+<p class="text-3xl font-black mt-1">02</p>
+<p class="text-xs text-on-surface-variant mt-2">Residential Renovation, Event</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-secondary">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="pending_actions">pending_actions</span>
+<h3 class="font-bold text-lg text-secondary">Recent Requests</h3>
+<p class="text-3xl font-black mt-1">01</p>
+<p class="text-xs text-on-surface-variant mt-2">Streetlight Repair (Pending)</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-primary-container">
+<span class="material-symbols-outlined text-primary-container mb-2" data-icon="event_available">event_available</span>
+<h3 class="font-bold text-lg text-primary-container">Next Event</h3>
+<p class="text-xl font-bold mt-1">Poblacion Cleanup</p>
+<p class="text-xs text-on-surface-variant mt-2">Saturday, 8:00 AM</p>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Profile Section -->
+<div class="lg:col-span-4">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex flex-col items-center text-center mb-8">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-4 ring-4 ring-surface-container-low">
+<img alt="Resident Profile" data-alt="Professional studio portrait of a resident, soft lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAohALpOwnyO25HfN6XOj61CmGLpfCs823-s5BsFsFC4Ry4Zg3_o_v71LUhzUUCFFdKJDIJ-EyTt9Hwl5w1K4UNQYDLV4PUNsfiAaQYIoEkD8rGLe3B1ZA246buYJSrALnNH0v7kRkt2f0pDWz-EwEkQYs6vZH-dHo2UgAwMyDn_9UBAkkoWhXGmxNs88XafyteeEd5MIrPDHSdEPIzwFbyULkMh4JTyKbhiIxv307mUDn4C2taDoGNo6Nz9ZR10YEHd8al3AP8eE0"/>
+</div>
+<h2 class="text-2xl font-bold text-primary">Juan Dela Cruz</h2>
+<p class="text-sm text-on-surface-variant font-medium">Certified Poblacion Resident</p>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="mail">mail</span>
+<div class="text-sm">
+<p class="text-xs text-on-surface-variant font-semibold uppercase tracking-tighter">Email Address</p>
+<p class="font-medium">juan.delacruz@email.ph</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="id_card">id_card</span>
+<div class="text-sm">
+<p class="text-xs text-on-surface-variant font-semibold uppercase tracking-tighter">Resident ID</p>
+<p class="font-medium">SPP-2023-0892</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="location_on">location_on</span>
+<div class="text-sm">
+<p class="text-xs text-on-surface-variant font-semibold uppercase tracking-tighter">Zone Address</p>
+<p class="font-medium">Zone 4, Sibulan Poblacion</p>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 border border-outline-variant text-primary font-bold rounded-lg hover:bg-surface-container transition-colors">
+                            Edit Profile
+                        </button>
+</div>
+</div>
+<!-- Facilities Section -->
+<div class="lg:col-span-8">
+<div class="flex justify-between items-end mb-6">
+<h2 class="text-3xl font-black text-primary tracking-tight">Local Facilities</h2>
+<a class="text-sm font-bold text-primary hover:underline" href="#">View All Facilities</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Facility Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group shadow-sm">
+<div class="h-40 relative">
+<img alt="The Rooftop" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk5YtzDbCvEDQXVfqV-QJles9pYr1QDmGGZZjIlcYdafcwAfvKVG2aSk-2QrOf1Zl4bE_lPpZeDjcuySj5XZv1FgIL_EWeTapUrvuSvQ-7nlBw8Cx6qwLKdF7K-ao5QKbFtxuXLN49nYYYkzBisuu-RUUidnrAIWd6SalJcVVwPp846K94PAPtpnR81DvPTJ74yjH1TLguhIvzxeJpGKJeoEBzvKQH9GEg0EYhmKLewg5X23WbC_TUOcHUWT0aSvQxul-LdpcUopA"/>
+<div class="absolute top-3 right-3 bg-primary text-on-primary text-[10px] font-bold px-2 py-1 rounded">AVAILABLE</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-2">The Rooftop</h4>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4">An open-air space with panoramic views, perfect for evening social gatherings and community mixers.</p>
+<button class="w-full py-2 bg-primary text-on-primary font-bold rounded hover:bg-primary-container transition-colors">Book Now</button>
+</div>
+</div>
+<!-- Facility Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group shadow-sm">
+<div class="h-40 relative">
+<img alt="Multipurpose Room" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKRyiOAC6CawIBkIaFrrNEVLpc3Os9lDT67TRVdg2pe7dDdbwlzN6xGHeBKgcyfVlVaKaMWxLd1A74BVQvGvJc329-G8ymz3oMQd2d_hlkunOBz74IM3S9dRwgAgjRppQFDU_9B9W58z9DCexhlLhfnDd30j2VzbJSBPcUPZXPMayVDoc6OAiFHR5n93cJtNuX-N90g4sHoFoEhALiGegJOdWX-ZvwEXUzS1yNTpcHRyCPCzjJAoT1hOwur2u5nbPzybLZTe2sgS4"/>
+<div class="absolute top-3 right-3 bg-secondary text-on-secondary text-[10px] font-bold px-2 py-1 rounded">WALK-IN</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-2">Multipurpose Room</h4>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4">Flexible indoor space designed for workshops, meetings, and small-scale indoor activities.</p>
+<button class="w-full py-2 border border-primary text-primary font-bold rounded hover:bg-surface-container transition-colors">View Details</button>
+</div>
+</div>
+<!-- Facility Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group shadow-sm">
+<div class="h-40 relative">
+<img alt="Gymnasium" class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYHerHmIlRTMEJADFS_SQZfbBY3Doo3T0hhVllp8pXsqOJSKmfkqo6iEUyT65we8xlwe9hUYkkEUI3NUj3m5JPo89E0HTiksGrsKkemOpON9JL_7Vb6IR-CQKP70Ufk5y6AD4Sdu10vCysyhPhnqEsEW7ngePa9BoeT70rxGHRtTaQYNN6PYE8t9F8Xmiy_U7tC9HdV71qAK4ADTyr4WR2eic-gJVQODcLN-l2QoY-O0MwG0kVUAeWT0kSl9C4LWJOgFzQ9GNBqtg"/>
+<div class="absolute top-3 right-3 bg-primary text-on-primary text-[10px] font-bold px-2 py-1 rounded">OPEN</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-lg mb-2">Gymnasium</h4>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4">State-of-the-art sports facility equipped for basketball, badminton, and group fitness classes.</p>
+<button class="w-full py-2 border border-primary text-primary font-bold rounded hover:bg-surface-container transition-colors">View Details</button>
+</div>
+</div>
+<!-- Add New Facility (Placeholder) -->
+</div>
+</div>
+</div>
+<!-- Inventory Section -->
+<section class="mt-16">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h2 class="text-3xl font-black text-primary tracking-tight">Community Inventory</h2>
+<p class="text-on-surface-variant text-sm mt-1">Available equipment for community events and official usage.</p>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container font-bold rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="request_quote">request_quote</span>
+                        Borrow Equipment
+                    </button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-xs font-black text-primary uppercase tracking-widest">Item Name</th>
+<th class="px-6 py-4 text-xs font-black text-primary uppercase tracking-widest">Total Quantity</th>
+<th class="px-6 py-4 text-xs font-black text-primary uppercase tracking-widest">Available</th>
+<th class="px-6 py-4 text-xs font-black text-primary uppercase tracking-widest">Condition</th>
+<th class="px-6 py-4 text-xs font-black text-primary uppercase tracking-widest">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container-low rounded">
+<span class="material-symbols-outlined text-primary" data-icon="chair">chair</span>
+</div>
+<span class="font-bold text-on-surface">Plastic Chairs</span>
+</div>
+</td>
+<td class="px-6 py-4 font-medium">500 units</td>
+<td class="px-6 py-4 font-bold text-primary">342 units</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> Excellent
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-[10px] font-bold bg-green-100 text-green-800 px-2 py-0.5 rounded uppercase">In Stock</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container-low rounded">
+<span class="material-symbols-outlined text-primary" data-icon="table_restaurant">table_restaurant</span>
+</div>
+<span class="font-bold text-on-surface">Foldable Tables</span>
+</div>
+</td>
+<td class="px-6 py-4 font-medium">40 units</td>
+<td class="px-6 py-4 font-bold text-primary">12 units</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-yellow-500"></span> Good
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-[10px] font-bold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded uppercase">Low Stock</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container-low rounded">
+<span class="material-symbols-outlined text-primary" data-icon="speaker_group">speaker_group</span>
+</div>
+<span class="font-bold text-on-surface">PA System</span>
+</div>
+</td>
+<td class="px-6 py-4 font-medium">4 units</td>
+<td class="px-6 py-4 font-bold text-primary">0 units</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> Mint
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-[10px] font-bold bg-red-100 text-red-800 px-2 py-0.5 rounded uppercase">All Borrowed</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-surface-container-low rounded">
+<span class="material-symbols-outlined text-primary" data-icon="videocam">videocam</span>
+</div>
+<span class="font-bold text-on-surface">Projector</span>
+</div>
+</td>
+<td class="px-6 py-4 font-medium">2 units</td>
+<td class="px-6 py-4 font-bold text-primary">1 units</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1 text-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-yellow-500"></span> Needs Cleaning
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-[10px] font-bold bg-green-100 text-green-800 px-2 py-0.5 rounded uppercase">Available</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Bottom Navigation for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#f9f9ff]/90 backdrop-blur-md flex justify-around items-center h-16 border-t border-outline-variant z-50">
+<a class="flex flex-col items-center gap-1 text-[#001e40] font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#43474f]" href="#">
+<span class="material-symbols-outlined" data-icon="home_work">home_work</span>
+<span class="text-[10px]">Facilities</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#43474f]" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-[10px]">Inventory</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#43474f]" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px]">Profile</span>
+</a>
+</nav>
+</main>
+</div>
+</body></html>

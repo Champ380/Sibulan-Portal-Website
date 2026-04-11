@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sibulan Poblacion Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#d8e3fb",
+              "tertiary-fixed": "#ffdbca",
+              "primary": "#001e40",
+              "tertiary-container": "#592300",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#d8885c",
+              "on-primary-container": "#799dd6",
+              "secondary": "#515f74",
+              "on-secondary-container": "#57657a",
+              "surface-container-high": "#dee8ff",
+              "on-surface-variant": "#43474f",
+              "error": "#ba1a1a",
+              "inverse-primary": "#a7c8ff",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-tertiary": "#ffffff",
+              "surface": "#f9f9ff",
+              "on-background": "#111c2d",
+              "primary-fixed-dim": "#a7c8ff",
+              "inverse-on-surface": "#ecf1ff",
+              "inverse-surface": "#263143",
+              "on-tertiary-fixed": "#341100",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d5e3fc",
+              "surface-container": "#e7eeff",
+              "on-tertiary-fixed-variant": "#723610",
+              "surface-tint": "#3a5f94",
+              "surface-container-low": "#f0f3ff",
+              "outline": "#737780",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#d5e3fc",
+              "background": "#f9f9ff",
+              "on-surface": "#111c2d",
+              "on-secondary-fixed": "#0d1c2e",
+              "primary-container": "#003366",
+              "outline-variant": "#c3c6d1",
+              "tertiary": "#381300",
+              "on-primary-fixed-variant": "#1f477b",
+              "surface-dim": "#cfdaf2",
+              "on-secondary-fixed-variant": "#3a485b",
+              "tertiary-fixed-dim": "#ffb690",
+              "primary-fixed": "#d5e3ff",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d8e3fb",
+              "surface-bright": "#f9f9ff",
+              "secondary-fixed-dim": "#b9c7df",
+              "on-primary-fixed": "#001b3c"
+            },
+            fontFamily: {
+              "headline": ["Public Sans"],
+              "body": ["Public Sans"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #001e40 0%, #003366 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- Main Content Area - Simplified and Centered -->
+<main class="flex-grow flex items-center justify-center py-16 px-6 bg-surface-bright">
+<div class="w-full max-w-md">
+<!-- Login Form Card -->
+<div class="bg-surface-container-lowest rounded-xl p-10 shadow-[0_32px_64px_-16px_rgba(17,28,45,0.06)] border border-outline-variant/15 relative overflow-hidden">
+<!-- Subtle Decorative Background -->
+<div class="absolute top-0 right-0 w-32 h-32 editorial-gradient opacity-5 -mr-16 -mt-16 rounded-full"></div>
+<div class="relative">
+<div class="mb-8 text-center">
+<h2 class="font-headline text-3xl font-bold text-primary mb-2">Sibulan Poblacion Portal</h2>
+<p class="text-on-surface-variant text-sm">Please enter your credentials.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-primary">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-[20px]">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded focus:ring-2 focus:ring-primary focus:bg-surface-container transition-all placeholder:text-outline/60 text-on-surface" placeholder="name@email.gov" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block font-label text-sm font-semibold text-primary">Password</label>
+<a class="text-xs font-semibold text-primary hover:underline" href="forgotpass.html">Forgot password?</a>
+</div>  
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-[20px]">lock</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded focus:ring-2 focus:ring-primary focus:bg-surface-container transition-all placeholder:text-outline/60 text-on-surface" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<button class="w-full editorial-gradient text-on-primary py-4 rounded font-bold text-lg hover:opacity-95 active:scale-[0.98] transition-all shadow-lg shadow-primary/10" type="submit">
+                        <a href="dashboarduser.html">Sign In</a>
+                    </button>
+</form>
+<div class="mt-8 pt-8 border-t border-outline-variant/30 text-center">
+<a href="registration.html"><button class="w-full bg-secondary-container text-on-secondary-container py-4 rounded font-bold hover:bg-surface-container-high transition-colors">Register Here!</button></a>
+</div>
+</div>
+</div>
+<!-- Trust Indicator Below Card -->
+</div>
+</main>
+</body></html>
